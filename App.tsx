@@ -52,7 +52,7 @@ const App: React.FC = () => {
                <img 
                  src="/logo.png" 
                  alt="M&E Sublime" 
-                className="w-48 md:w-64 lg:w-80 object-contain" 
+                className="w-54 md:w-70 lg:w-86 object-contain" 
                  />
             </div>
             <div className="flex flex-col">
