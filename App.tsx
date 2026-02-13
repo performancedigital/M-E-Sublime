@@ -49,7 +49,11 @@ const App: React.FC = () => {
           <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <div className="w-16 h-16 logo-ring overflow-hidden flex items-center justify-center bg-white shadow-inner group-hover:scale-110 transition-transform">
                {/* Caminho absoluto da raiz do repositório */}
-               <img src="/logo.png" alt="M&E Sublime" className="w-full h-full object-contain p-1" />
+               <img 
+                 src="/logo.png" 
+                 alt="M&E Sublime" 
+                className="w-48 md:w-64 lg:w-80 object-contain" 
+                 />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-2xl tracking-tighter leading-none gold-text-gradient uppercase">SUBLIME</span>
