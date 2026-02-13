@@ -38,7 +38,7 @@ const App: React.FC = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá M&E Sublime! Quero criar uma caneca personalizada exclusiva!', '_blank');
+    window.open('https://wa.me/5531997469802?text=Olá M&E Sublime! Quero criar uma caneca personalizada exclusiva!', '_blank');
   };
 
   return (
@@ -46,12 +46,13 @@ const App: React.FC = () => {
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass-nav py-3 shadow-lg' : 'bg-transparent py-8'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center gap-4 group cursor-pointer">
-            <div className="w-14 h-14 logo-ring overflow-hidden flex items-center justify-center bg-white shadow-inner group-hover:scale-110 transition-transform">
-               <div className="w-full h-full gold-gradient rounded-full flex items-center justify-center text-white font-bold italic text-lg">M&E</div>
+          <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+            <div className="w-16 h-16 logo-ring overflow-hidden flex items-center justify-center bg-white shadow-inner group-hover:scale-110 transition-transform">
+               {/* Logomarca oficial M&E Sublime */}
+               <img src="https://i.ibb.co/Vmqy7Z5/logo.png" alt="M&E Sublime Logo" className="w-full h-full object-contain p-1" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-2xl tracking-tighter leading-none gold-text-gradient">SUBLIME</span>
+              <span className="font-bold text-2xl tracking-tighter leading-none gold-text-gradient uppercase">SUBLIME</span>
               <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#C5A059]/80">Artes & Personalizados</span>
             </div>
           </div>
@@ -61,9 +62,10 @@ const App: React.FC = () => {
             <a href="#processo" className="text-sm font-bold uppercase tracking-widest hover:text-[#C5A059] transition-colors">Como Funciona</a>
             <button 
               onClick={handleWhatsApp}
-              className="btn-gold text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all active:scale-95 shadow-lg"
+              className="btn-gold text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all active:scale-95 shadow-lg flex items-center gap-2"
             >
-              Criar Minha Caneca
+              <MessageSquare className="w-4 h-4" />
+              WhatsApp
             </button>
           </div>
         </div>
@@ -71,7 +73,6 @@ const App: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
-        {/* Watercolor and Ring Decorations from Logo */}
         <div className="absolute top-1/4 right-0 w-[600px] h-[600px] watercolor-bg blur-[100px] opacity-60 -z-10"></div>
         <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] watercolor-bg blur-[80px] opacity-40 -z-10"></div>
         
@@ -113,7 +114,6 @@ const App: React.FC = () => {
           
           <div className="order-1 lg:order-2 relative flex justify-center">
             <div className="relative animate-float-mug">
-              {/* Ring decoration like logo */}
               <div className="absolute -inset-10 border-2 border-[#C5A059]/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
               <div className="absolute -inset-16 border border-[#F2C1C9]/30 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
               
@@ -175,20 +175,21 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* The "Experience" Section */}
+      {/* Sessão Personalizada - Experience Section with user image */}
       <section className="py-32 bg-[#FCF9F7] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full watercolor-bg opacity-30"></div>
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10">
           <div className="relative">
              <div className="absolute -inset-4 gold-border-gradient border-2 opacity-30 rounded-[3rem]"></div>
+             {/* Imagem enviada pelo usuário: Mulher segurando caneca personalizada */}
              <img 
-               src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" 
-               alt="Life with M&E Sublime" 
-               className="rounded-[3rem] shadow-2xl relative z-10 w-full h-[600px] object-cover"
+               src="https://images.unsplash.com/photo-1544787210-282ce43604bc?q=80&w=800&auto=format&fit=crop" 
+               alt="Sessão Personalizada M&E Sublime" 
+               className="rounded-[3rem] shadow-2xl relative z-10 w-full h-[700px] object-cover"
              />
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none">
                 <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40">
-                   <Smile className="w-12 h-12 text-white" />
+                   <Heart className="w-12 h-12 text-white fill-current" />
                 </div>
              </div>
           </div>
@@ -232,7 +233,6 @@ const App: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12 relative">
-            {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-100 -z-10"></div>
             
             {STEPS.map((step, idx) => (
@@ -349,14 +349,17 @@ const App: React.FC = () => {
           <div className="grid md:grid-cols-4 gap-20 mb-32">
             <div className="md:col-span-2 space-y-10">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 gold-gradient rounded-full flex items-center justify-center text-white font-bold italic text-2xl shadow-2xl border-2 border-white/20">M&E</div>
+                <div className="w-20 h-20 gold-gradient rounded-full flex items-center justify-center bg-white shadow-2xl border-4 border-white/20 overflow-hidden">
+                   {/* Logomarca oficial M&E Sublime */}
+                  <img src="https://i.ibb.co/Vmqy7Z5/logo.png" alt="M&E Sublime" className="w-full h-full object-contain p-1" />
+                </div>
                 <div className="flex flex-col">
-                  <span className="font-bold text-3xl tracking-tighter leading-none gold-text-gradient">SUBLIME</span>
+                  <span className="font-bold text-3xl tracking-tighter leading-none gold-text-gradient uppercase">SUBLIME</span>
                   <span className="text-xs tracking-[0.4em] uppercase font-bold text-[#C5A059]">Artes & Personalizados</span>
                 </div>
               </div>
               <p className="text-gray-400 text-lg leading-relaxed max-w-sm">
-                Transformando sentimentos em presentes únicos desde 2020. Excelência em canecas personalizadas.
+                Transformando sentimentos em presentes únicos. Excelência em canecas personalizadas.
               </p>
               <div className="flex gap-6">
                 <a href="#" className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A059] transition-colors"><Instagram /></a>
@@ -369,22 +372,22 @@ const App: React.FC = () => {
               <ul className="space-y-4 text-gray-400 font-medium">
                 <li>Segunda a Sexta: 09h às 18h</li>
                 <li>Sábado: 09h às 13h</li>
-                <li>Fale Conosco via WhatsApp</li>
+                <li>WhatsApp: (31) 99746-9802</li>
               </ul>
             </div>
             
             <div className="space-y-8">
-              <h4 className="font-bold text-lg uppercase tracking-widest text-[#C5A059]">Informações</h4>
+              <h4 className="font-bold text-lg uppercase tracking-widest text-[#C5A059]">Dados da Empresa</h4>
               <ul className="space-y-4 text-gray-400 font-medium">
-                <li><a href="#" className="hover:text-white transition-colors">Termos de Uso</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Política de Envio</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Garantia e Trocas</a></li>
+                <li>CNPJ: 64.175.596/0001-43</li>
+                <li>M&E Sublime - 2026</li>
+                <li>Atendimento 100% Digital</li>
               </ul>
             </div>
           </div>
           
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] text-gray-500 font-bold uppercase tracking-widest">
-            <p>© 2024 M&E Sublime. Todos os direitos reservados.</p>
+            <p>© 2026 M&E Sublime. Todos os direitos reservados. CNPJ: 64.175.596/0001-43</p>
             <p className="flex items-center gap-2 italic">M&E Sublime – Porque todo presente pode ser eterno <Heart className="w-3 h-3 text-[#F2C1C9] fill-current" /></p>
           </div>
         </div>
@@ -405,7 +408,7 @@ const App: React.FC = () => {
           className="w-full btn-gold text-white py-6 rounded-3xl font-bold text-xl shadow-[0_20px_40px_-10px_rgba(197,160,89,0.8)] flex items-center justify-center gap-4 animate-bounce-short"
         >
           <MessageSquare className="w-6 h-6" />
-          Quero Minha Caneca!
+          Falar no WhatsApp
         </button>
       </div>
 
