@@ -38,7 +38,6 @@ const App: React.FC = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    // Telefone atualizado: 31997469802
     window.open('https://wa.me/5531997469802?text=Olá M&E Sublime! Quero criar uma caneca personalizada exclusiva!', '_blank');
   };
 
@@ -49,8 +48,8 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <div className="w-16 h-16 logo-ring overflow-hidden flex items-center justify-center bg-white shadow-inner group-hover:scale-110 transition-transform">
-               {/* Caminho relativo para o GitHub/Vercel */}
-               <img src="./logo.png" alt="M&E Sublime" className="w-full h-full object-contain p-1" onError={(e) => { e.currentTarget.src = "https://i.ibb.co/Vmqy7Z5/logo.png" }} />
+               {/* Caminho absoluto da raiz do repositório */}
+               <img src="/logo.png" alt="M&E Sublime" className="w-full h-full object-contain p-1" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-2xl tracking-tighter leading-none gold-text-gradient uppercase">SUBLIME</span>
@@ -176,22 +175,22 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Sessão Personalizada - Imagem enviada pelo usuário */}
+      {/* Sessão Personalizada - Imagem "Caneca Borboleta" enviada */}
       <section className="py-32 bg-[#FCF9F7] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full watercolor-bg opacity-30"></div>
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10">
           <div className="relative">
              <div className="absolute -inset-4 gold-border-gradient border-2 opacity-30 rounded-[3rem]"></div>
-             {/* Imagem personalizada (Mulher segurando caneca borboleta) */}
+             {/* Referência à imagem na raiz do repositório */}
              <img 
-               src="./caneca-premium.jpg" 
-               alt="Caneca Personalizada Borboleta" 
-               className="rounded-[3rem] shadow-2xl relative z-10 w-full h-[650px] object-cover"
-               onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1544787210-282ce43604bc?q=80&w=800&auto=format&fit=crop" }}
+               src="/caneca-premium.jpg" 
+               alt="Sua Caneca Premium M&E Sublime" 
+               className="rounded-[3rem] shadow-2xl relative z-10 w-full h-[700px] object-cover"
              />
-             <div className="absolute bottom-10 right-10 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/50 z-20">
-                <Heart className="text-[#F2C1C9] w-8 h-8 mb-2 fill-current" />
-                <p className="font-bold text-[#3D2B1F] text-sm italic">O presente que marca o olhar.</p>
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none">
+                <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40">
+                   <Heart className="w-12 h-12 text-white fill-current" />
+                </div>
              </div>
           </div>
           
@@ -220,6 +219,14 @@ const App: React.FC = () => {
                 <h4 className="font-bold text-lg">Entrega Blindada</h4>
                 <p className="text-sm text-gray-400">Embalagem pensada para que nada estrague sua surpresa.</p>
               </div>
+            </div>
+            <div className="pt-6">
+                <button 
+                  onClick={handleWhatsApp}
+                  className="btn-gold text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl flex items-center gap-3 hover:scale-105 transition-transform"
+                >
+                  <MessageSquare className="w-6 h-6" /> Quero uma igual a esta
+                </button>
             </div>
           </div>
         </div>
@@ -341,7 +348,7 @@ const App: React.FC = () => {
             <div className="md:col-span-2 space-y-10">
               <div className="flex items-center gap-4">
                 <div className="w-20 h-20 gold-gradient rounded-full flex items-center justify-center bg-white shadow-2xl border-4 border-white/20 overflow-hidden">
-                  <img src="./logo.png" alt="M&E Sublime" className="w-full h-full object-contain p-1" onError={(e) => { e.currentTarget.src = "https://i.ibb.co/Vmqy7Z5/logo.png" }} />
+                  <img src="/logo.png" alt="M&E Sublime" className="w-full h-full object-contain p-1" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-3xl tracking-tighter leading-none gold-text-gradient uppercase">SUBLIME</span>
@@ -367,7 +374,7 @@ const App: React.FC = () => {
             </div>
             
             <div className="space-y-8">
-              <h4 className="font-bold text-lg uppercase tracking-widest text-[#C5A059]">Dados Institucionais</h4>
+              <h4 className="font-bold text-lg uppercase tracking-widest text-[#C5A059]">Dados da Empresa</h4>
               <ul className="space-y-4 text-gray-400 font-medium">
                 <li>CNPJ: 64.175.596/0001-43</li>
                 <li>M&E Sublime - 2026</li>
@@ -383,19 +390,19 @@ const App: React.FC = () => {
         </div>
       </footer>
 
-      {/* Floating Button WhatsApp */}
+      {/* Floating Button WhatsApp Desktop */}
       <button 
         onClick={handleWhatsApp}
-        className="fixed bottom-10 right-10 z-[100] w-20 h-20 gold-gradient rounded-full shadow-2xl hidden md:flex items-center justify-center text-white hover:scale-110 transition-transform animate-bounce-short"
+        className="fixed bottom-10 right-10 z-[100] w-20 h-20 bg-[#25D366] rounded-full shadow-2xl hidden md:flex items-center justify-center text-white hover:scale-110 transition-transform animate-bounce-short border-4 border-white/20"
       >
         <MessageSquare className="w-10 h-10" />
       </button>
 
-      {/* Sticky Mobile CTA */}
+      {/* Sticky Mobile CTA com cor do WhatsApp */}
       <div className="fixed bottom-0 left-0 right-0 p-6 z-[100] md:hidden">
         <button 
           onClick={handleWhatsApp}
-          className="w-full btn-gold text-white py-6 rounded-3xl font-bold text-xl shadow-[0_20px_40px_-10px_rgba(197,160,89,0.8)] flex items-center justify-center gap-4 animate-bounce-short"
+          className="w-full bg-[#25D366] text-white py-6 rounded-3xl font-bold text-xl shadow-[0_20px_40px_-10px_rgba(37,211,102,0.6)] flex items-center justify-center gap-4 animate-bounce-short border-b-4 border-green-700"
         >
           <MessageSquare className="w-6 h-6" />
           Falar no WhatsApp
