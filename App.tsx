@@ -118,7 +118,7 @@ const App: React.FC = () => {
               <div className="absolute -inset-16 border border-[#F2C1C9]/30 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
               
               <img 
-                src="https://images.unsplash.com/photo-1577937927133-66ef06ac9f1a?q=80&w=1000&auto=format&fit=crop" 
+                src="/hero-caneca.jpg" 
                 alt="Caneca Personalizada M&E Sublime" 
                 className="relative z-10 w-full max-w-[500px] rounded-[4rem] shadow-[0_50px_100px_-20px_rgba(61,43,31,0.3)] border-[16px] border-white object-cover aspect-square"
               />
