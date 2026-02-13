@@ -1,0 +1,7 @@
+{
+  "name": "M&E Sublime - Landing Page",
+  "description": "A premium, emotional, and high-converting landing page for a custom mug digital business specializing in eternal memories.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
