@@ -19,39 +19,21 @@ import { Collection, Testimonial, Step, FAQItem } from './types';
 export const COLLECTIONS: Collection[] = [
   { 
     id: '1', 
-    title: 'Linha Afeto', 
-    image: 'https://images.unsplash.com/photo-1544787210-282ce43604bc?q=80&w=600&auto=format&fit=crop', 
-    description: 'Eternize fotos de família e momentos que aquecem o peito.' 
+    title: 'Aniversários', 
+    image: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800&auto=format&fit=crop', 
+    description: 'Celebre a vida de quem você ama com um presente que será usado todos os dias.' 
   },
   { 
     id: '2', 
-    title: 'Amor & Romance', 
-    image: 'https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?q=80&w=600&auto=format&fit=crop', 
-    description: 'Para o casal que divide mais do que apenas o café.' 
+    title: 'Dia das Mães', 
+    image: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop', 
+    description: 'Um gesto de carinho para a mulher mais importante da sua vida.' 
   },
   { 
     id: '3', 
-    title: 'Pet Lovers', 
-    image: 'https://images.unsplash.com/photo-1535914223966-3240a28351c4?q=80&w=600&auto=format&fit=crop', 
-    description: 'A fofula do seu pet estampada com perfeição.' 
-  },
-  { 
-    id: '4', 
-    title: 'Doses de Orgulho', 
-    image: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=600&auto=format&fit=crop', 
-    description: 'Canecas personalizadas com sua profissão ou conquista.' 
-  },
-  { 
-    id: '5', 
-    title: 'Geek & Arte', 
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop', 
-    description: 'Designs exclusivos para fãs de filmes, séries e jogos.' 
-  },
-  { 
-    id: '6', 
-    title: 'Eventos & Marcas', 
-    image: 'https://images.unsplash.com/photo-1536939459926-301728717817?q=80&w=600&auto=format&fit=crop', 
-    description: 'Identidade visual e elegância para sua empresa ou festa.' 
+    title: 'Dia dos Namorados', 
+    image: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=800&auto=format&fit=crop', 
+    description: 'Eternize o amor de vocês em uma peça exclusiva e romântica.' 
   },
 ];
 
@@ -64,9 +46,9 @@ export const STEPS: Step[] = [
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
-  { id: 1, name: 'Juliana Paiva', role: 'Presente de Aniversário', content: 'Minha mãe chorou quando viu a foto dos netos na caneca. A qualidade é surreal, cores vivas e o brilho é lindo!', image: 'https://i.pravatar.cc/150?u=ju', stars: 5 },
-  { id: 2, name: 'Marcos Oliveira', role: 'Colecionador', content: 'Fiz uma caneca Geek personalizada e superou minhas expectativas. Acabamento perfeito e entrega rápida.', image: 'https://i.pravatar.cc/150?u=ma', stars: 5 },
-  { id: 3, name: 'Renata Souza', role: 'Empresária', content: 'Encomendei para os brindes da empresa e todos amaram. A M&E Sublime é profissional demais!', image: 'https://i.pravatar.cc/150?u=re', stars: 5 },
+  { id: 1, name: 'Juliana Oliveira', role: 'Presente de Aniversário', content: 'Fiquei impressionada com a nitidez da foto na caneca. Foi o presente de aniversário perfeito para o meu pai!', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop', stars: 5 },
+  { id: 2, name: 'Marcos Silva', role: 'Presente Romântico', content: 'Minha namorada amou a caneca que fizemos com nossa foto da viagem. Qualidade premium mesmo.', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop', stars: 5 },
+  { id: 3, name: 'Renata Castro', role: 'Dia das Mães', content: 'Melhor presente que já dei à minha mãe. O acabamento é impecável e não desbota.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop', stars: 5 },
 ];
 
 export const FAQ: FAQItem[] = [
